@@ -11,6 +11,7 @@ function CreateGroup({ onClose }) {
   const [selectedColor, setSelectedColor] = useState(" ");
   const GroupModel = useRef(null);
 
+  // Close modal on outside click
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (GroupModel.current && !GroupModel.current.contains(event.target)) {
@@ -24,10 +25,12 @@ function CreateGroup({ onClose }) {
     };
   }, [onClose]);
 
+  // Function to set color
   const onColorSelect = (color) => {
     setSelectedColor(color);
   };
 
+  // Function to create group
   const handleCreateGroup = () => {
     if (newGroupName.trim().length < 2) {
       return toast.error("More then 1 character required");
@@ -57,6 +60,7 @@ function CreateGroup({ onClose }) {
     }
   };
 
+  // Enter key to create group
   const handelKeyPress = (e) => {
     if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault();
@@ -64,6 +68,7 @@ function CreateGroup({ onClose }) {
     }
   };
 
+  // Color options
   const colors = [
     "#B38BFA",
     "#FF79F2",

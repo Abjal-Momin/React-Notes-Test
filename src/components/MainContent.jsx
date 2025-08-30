@@ -3,7 +3,6 @@ import NotesPanel from "./NotesPanel";
 import styles from "../styles/MainContent.module.css";
 
 function MainContent({ selectedGroup, notes, onAddNote, handleBackToGroups }) {
-
   return (
     <div className={styles.mainContent}>
       {selectedGroup ? (
