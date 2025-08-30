@@ -11,7 +11,7 @@ A React-based notes-taking website that lets users create groups and add notes w
 ## 🚀 Live Demo
 
 Check out the live version of the app here:  
-👉 [Live Link](https://example.com)
+👉 [Live Link](https://react-note-taking-test.netlify.app/)
 
 ## Technologies Used
 - **Frontend**: React 19
