@@ -1,0 +1,71 @@
+.sidebar {
+  width: 20vw;
+  height: 100vh;
+  background: #ffffff;
+  position: relative;
+}
+
+.appTitle {
+  height: 15%;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #000000;
+  padding: 1.5rem 1rem;
+  cursor: pointer;
+}
+.createButton {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  background-color: #16008b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+.plusIcon {
+  background-color: #16008b;
+  cursor: pointer;
+  border: none;
+}
+.plusIcon img {
+  width: 1.4rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .sidebar {
+    width: 25vw;
+  }
+  .appTitle {
+    font-size: 1.7rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .sidebar {
+    width: 30vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .sidebar {
+    width: 100vw;
+  }
+  .createButton {
+    height: 5rem;
+    width: 5rem;
+    bottom: 5rem;
+  }
+  .appTitle {
+    height: auto;
+  }
+
+  .plusIcon img {
+    width: 1.6rem;
+  }
+}

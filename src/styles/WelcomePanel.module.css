@@ -1,0 +1,41 @@
+.welcomePanel {
+  width: 75vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #DAE5F5;
+  text-align: center;
+  position: relative;
+}
+
+.welcomeContent h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: black;
+  margin: 0.6rem 0;
+}
+.welcomeContent p {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #292929;
+  line-height: 1.5rem;
+}
+.welcomeImage {
+  height: 17em;
+}
+.welcomeFooter {
+  position: absolute;
+  bottom: 0;
+  font-size: 0.9rem;
+  color: #292929;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.welcomeFooter img {
+  height: 0.8rem;
+}

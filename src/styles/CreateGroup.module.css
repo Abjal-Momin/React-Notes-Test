@@ -1,0 +1,128 @@
+.createGroupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+.createGroup {
+  background: white;
+  border-radius: 0.4rem;
+  padding: 2.1rem;
+  width: 40rem;
+  max-width: 90vw;
+}
+.createGroup h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  color: #000000;
+}
+.formGroup {
+  margin-bottom: 1.3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.formGroupColor {
+  margin-bottom: 1.3rem;
+  display: flex;
+  justify-content: start;
+  gap: 4rem;
+  align-items: center;
+}
+
+.formGroup label {
+  margin-bottom: 0.6rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #000000;
+  text-align: center;
+}
+
+.formGroupColor label {
+  margin-bottom: 0.6rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #000000;
+  text-align: center;
+}
+.formGroup input {
+  width: 70%;
+  padding: 0.8rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 30px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.formGroup input:focus {
+  border-color: #001f8b;
+}
+
+.createGroupButton {
+  background: #001f8b;
+  color: white;
+  border: none;
+  padding: 5px 3rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  float: right;
+}
+
+.createGroupButton:hover:not(:disabled) {
+  background: #1701bc;
+}
+
+.createGroupButton:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+}
+
+.colorPicker {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.colorOption {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 3px solid transparent;
+}
+
+.colorOption:hover {
+  filter: brightness(85%);
+}
+
+.colorOption.selected {
+  border: 3px solid black;
+}
+
+@media (max-width: 767px) {
+  .colorOption {
+    width: 2rem;
+    height: 2rem;
+  }
+  .createGroupButton {
+    padding: 5px 5rem;
+  }
+  .formGroupColor {
+    gap: 5px;
+  }
+  .formGroupColor label {
+    font-size: 1.1rem;
+  }
+}

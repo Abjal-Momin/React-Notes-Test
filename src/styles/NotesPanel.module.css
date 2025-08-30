@@ -1,0 +1,191 @@
+.notesPanel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #dae5f5;
+  width: 80vw;
+  height: 100vh;
+}
+.notesContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #dae5f5;
+  overflow: hidden;
+}
+
+.notesHeader {
+  background: #001f8b;
+  color: white;
+  padding: 1rem 1.3rem;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.backToGroupBnt {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+  font-weight: 900;
+}
+.activeBnt {
+  display: flex;
+}
+.inactiveBnt {
+  display: none;
+}
+
+.groupAvatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-right: 1rem;
+}
+
+.groupName {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+}
+
+/* Notes Styles */
+.notesList {
+  flex: 1;
+  overflow-y: auto;
+  color: #000000;
+  padding: 1rem;
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+}
+
+.noteItem {
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 5px;
+  margin: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.noteContent {
+  display: flex;
+  flex-direction: column;
+}
+.noteText {
+  color: #000000;
+  line-height: 1.5;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.noteMeta {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #101010;
+}
+
+/* InputBox Styles */
+.noteInputContainer {
+  background: #001f8b;
+  padding: 0.8rem;
+  display: flex;
+  justify-content: end;
+  gap: 15px;
+  border-radius: 4px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.inputArea {
+  width: 100%;
+  display: flex;
+  background: #ffffff;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.noteInput {
+  flex: 1;
+  border: none;
+  outline: none;
+  resize: none;
+  font-size: 1rem;
+  font-family: system-ui;
+  background: transparent;
+  color: black;
+  height: 4rem;
+}
+
+.noteInput::placeholder {
+  color: #999;
+}
+
+.sendButton {
+  border: none;
+  background: transparent;
+  transition: all 0.2s;
+  display: flex;
+  align-items: end;
+  padding: 0.4rem 0.8rem;
+}
+.sendImg {
+  width: 1.2rem;
+  height: 1.2rem;
+  filter: grayscale(100%) brightness(150%);
+  cursor: not-allowed;
+}
+
+.sendButton.active {
+  .sendImg {
+    cursor: pointer;
+    filter: brightness(100%);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .notesPanel {
+    width: 75vw;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .notesPanel {
+    width: 70vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .notesPanel {
+    width: 100vw;
+  }
+  .groupAvatar {
+    font-size: 1rem;
+  }
+  .noteInputContainer {
+    padding: 2rem;
+  }
+  .inputArea {
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .sendImg {
+    width: 1rem;
+    height: 1rem;
+  }
+}

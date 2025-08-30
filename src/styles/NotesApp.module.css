@@ -1,0 +1,16 @@
+.notesApp {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background: #dae5f5;
+}
+
+@media screen and (max-width: 767px) {
+  .notesApp {
+    flex-direction: column;
+  }
+  
+  .backButton:hover {
+    background: #001970;
+  }
+}
