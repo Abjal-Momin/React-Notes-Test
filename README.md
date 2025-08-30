@@ -3,6 +3,7 @@
 A React-based notes-taking website that lets users create groups and add notes within them. Organize your thoughts efficiently by grouping related notes together.
 
 ## Features
+
 - Create and manage groups
 - Add multiple notes within groups
 - Clean and simple user interface
@@ -11,9 +12,10 @@ A React-based notes-taking website that lets users create groups and add notes w
 ## 🚀 Live Demo
 
 Check out the live version of the app here:  
-👉 [Live Link](https://react-note-taking-test.netlify.app/)
+👉 [Live Link](https://react-notes-test-app.netlify.app/)
 
 ## Technologies Used
+
 - **Frontend**: React 19
 - **Routing**: React Router v7
 - **Build Tool**: Vite
@@ -22,6 +24,7 @@ Check out the live version of the app here:
 - **Notifications**: React Toastify
 
 ## Setup Instructions
+
 1. Clone the repository:  
    `git clone https://github.com/Abjal-Momin/React-Notes-Test`
 2. Install dependencies:  
@@ -32,6 +35,7 @@ Check out the live version of the app here:
    `npm run build`
 
 ## File Structure
+
 ```
 ReactModuleTest/
 ├── public/            # Static assets
