@@ -17,26 +17,26 @@ function NotesApp() {
   const [selectedGroupId, setSelectedGroupId] = useState(null);
   const [showMobileContent, setShowMobileContent] = useState(false);
   const isMobile = useResponsive().isMobile;
-  const navigate = useNavigate();
-  const location = useLocation();
+  // const navigate = useNavigate();
+  // const location = useLocation();
 
   // Restore the selected group when the page loads or URL changes
-  useEffect(() => {
-    const path = location.pathname;
-    const match = path.match(/\/groups\/(\d+)/);
+  // useEffect(() => {
+  //   const path = location.hash;
+  //   const match = path.match(/#\/groups\/(\d+)/);
 
-    if (match) {
-      const groupIdFromUrl = parseInt(match[1]);
-      const foundGroup = groupList.find((g) => g.id === groupIdFromUrl);
+  //   if (match) {
+  //     const groupIdFromUrl = parseInt(match[1]);
+  //     const foundGroup = groupList.find((g) => g.id === groupIdFromUrl);
 
-      if (foundGroup) {
-        setSelectedGroup(foundGroup);
-        setSelectedGroupId(foundGroup.id);
-      }
-    } else if (selectedGroupId) {
-      navigate(`/groups/${selectedGroupId}`);
-    }
-  }, [location.pathname, groupList]);
+  //     if (foundGroup) {
+  //       setSelectedGroup(foundGroup);
+  //       setSelectedGroupId(foundGroup.id);
+  //     }
+  //   } else if (selectedGroupId && !path.includes('/groups/')) {
+  //     navigate(`/groups/${selectedGroupId}`);
+  //   }
+  // }, [location.hash, groupList]);
 
   // Function adds Notes with groupId to Notes context
   const handleAddNote = (noteData) => {
@@ -46,17 +46,17 @@ function NotesApp() {
   };
 
   // Save the current route to localStorage when it changes
-  useEffect(() => {
-    localStorage.setItem("lastRoute", location.pathname);
-  }, [location.pathname]);
+  // useEffect(() => {
+  //   localStorage.setItem("lastRoute", location.hash.replace('#', ''));
+  // }, [location.hash]);
 
   // Restore the last route on initial load
-  useEffect(() => {
-    const lastRoute = localStorage.getItem("lastRoute");
-    if (lastRoute && lastRoute !== "/" && location.pathname === "/") {
-      navigate(lastRoute);
-    }
-  }, []);
+  // useEffect(() => {
+  //   const lastRoute = localStorage.getItem("lastRoute");
+  //   if (lastRoute && lastRoute !== "/" && location.pathname === "/") {
+  //     navigate(lastRoute);
+  //   }
+  // }, []);
 
   // Get the selected group and its id
   const onSelectGroup = (group) => {
