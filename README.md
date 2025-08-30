@@ -23,9 +23,9 @@ Check out the live version of the app here:
 
 ## Setup Instructions
 1. Clone the repository:  
-   `git clone https://github.com/your-username/react-notes-app.git`
+   `git clone https://github.com/Abjal-Momin/React-Notes-Test`
 2. Install dependencies:  
-   `cd react-notes-app && npm install`
+   `cd React-Notes-Test && npm install`
 3. Start development server:  
    `npm run dev`
 4. Build for production:  
